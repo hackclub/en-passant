@@ -7,16 +7,23 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@jeremy46231/ferry':
+        specifier: ^0.2.0
+        version: 0.2.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.9
         version: 2.5.9
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
       typescript:
         specifier: ~6.0.2
         version: 6.0.3
       vite:
         specifier: ^8.2.0
-        version: 8.2.1
+        version: 8.2.1(@types/node@26.2.0)
 
 packages:
 
@@ -76,6 +83,10 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@jeremy46231/ferry@0.2.0':
+    resolution: {integrity: sha512-TPclQVZ3XEhuT1euDIqn3P0aqGY0Apx6ZNe8j393dKff3IczDJ2L8Y95QXRRQEnpH9JCAfM/qItTwz+mbX11Nw==}
+    engines: {node: '>=18'}
 
   '@oxc-project/types@0.146.0':
     resolution: {integrity: sha512-XC0QsnnhVe7sLIWmYmdPw7x5P0h4W8vUU3Nv1ySgWXtvCz8NizoAEpGXA0sOYoJQV2Rl13LgURAHQ5cI5ILCSA==}
@@ -178,6 +189,9 @@ packages:
 
   '@rolldown/pluginutils@1.0.1':
     resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
+
+  '@types/node@26.2.0':
+    resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
 
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
@@ -305,6 +319,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  undici-types@8.3.0:
+    resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
+
   vite@8.2.1:
     resolution: {integrity: sha512-EU/eS7BH3XROHh2YnBefjM6DBKA6ZeMZEYQbj7NLWg5wHYlhB8B/Mayd5XsgWq+NFYccDOTemRpdETWR6Ka/lw==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -385,6 +402,8 @@ snapshots:
   '@biomejs/cli-win32-x64@2.5.9':
     optional: true
 
+  '@jeremy46231/ferry@0.2.0': {}
+
   '@oxc-project/types@0.146.0': {}
 
   '@rolldown/binding-android-arm-eabi@1.2.5':
@@ -433,6 +452,10 @@ snapshots:
     optional: true
 
   '@rolldown/pluginutils@1.0.1': {}
+
+  '@types/node@26.2.0':
+    dependencies:
+      undici-types: 8.3.0
 
   detect-libc@2.1.2: {}
 
@@ -534,7 +557,9 @@ snapshots:
 
   typescript@6.0.3: {}
 
-  vite@8.2.1:
+  undici-types@8.3.0: {}
+
+  vite@8.2.1(@types/node@26.2.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.5
@@ -542,4 +567,5 @@ snapshots:
       rolldown: 1.2.5
       tinyglobby: 0.2.17
     optionalDependencies:
+      '@types/node': 26.2.0
       fsevents: 2.3.3

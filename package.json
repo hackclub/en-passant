@@ -12,7 +12,11 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.9",
+		"@types/node": "^26.2.0",
 		"typescript": "~6.0.2",
 		"vite": "^8.2.0"
+	},
+	"dependencies": {
+		"@jeremy46231/ferry": "^0.2.0"
 	}
 }

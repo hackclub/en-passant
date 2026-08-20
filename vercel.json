@@ -1,7 +1,13 @@
 {
-	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"framework": "vite",
-	"buildCommand": "pnpm build",
-	"installCommand": "pnpm install",
-	"outputDirectory": "dist"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/submit",
+      "destination": "/api/submit"
+    }
+  ]
 }
