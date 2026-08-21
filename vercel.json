@@ -7,7 +7,7 @@
   "redirects": [
     {
       "source": "/submit",
-      "destination": "/api/submit"
+      "destination": "/api/submit/start"
     }
   ]
 }

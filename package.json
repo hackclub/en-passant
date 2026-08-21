@@ -17,6 +17,6 @@
 		"vite": "^8.2.0"
 	},
 	"dependencies": {
-		"@jeremy46231/ferry": "^0.2.0"
+		"@jeremy46231/ferry": "^0.3.0"
 	}
 }

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@jeremy46231/ferry':
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^0.3.0
+        version: 0.3.0
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.9
@@ -84,8 +84,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@jeremy46231/ferry@0.2.0':
-    resolution: {integrity: sha512-TPclQVZ3XEhuT1euDIqn3P0aqGY0Apx6ZNe8j393dKff3IczDJ2L8Y95QXRRQEnpH9JCAfM/qItTwz+mbX11Nw==}
+  '@jeremy46231/ferry@0.3.0':
+    resolution: {integrity: sha512-Da949wiKeUnTT2gXacvcyW+KqetdwlbmkQuQio9jjq+VkI0VDXESVj/8GkamaTvFa8MIM3/3KfLhIiftWm+QIg==}
     engines: {node: '>=18'}
 
   '@oxc-project/types@0.146.0':
@@ -402,7 +402,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.5.9':
     optional: true
 
-  '@jeremy46231/ferry@0.2.0': {}
+  '@jeremy46231/ferry@0.3.0': {}
 
   '@oxc-project/types@0.146.0': {}
 
