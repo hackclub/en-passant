@@ -4,10 +4,715 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>en-passant</title>
+    <title>En Passant</title>
+    <meta
+      name="description"
+      content="Build a board game that runs in a browser. Get real prizes from the shop. A free Hack Club program for teens 13 to 18."
+    />
+    <meta property="og:title" content="En Passant" />
+    <meta
+      property="og:description"
+      content="Build a board game that runs in a browser. Get real prizes from the shop."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://enpassant.hackclub.com/" />
+    <meta property="og:image" content="https://enpassant.hackclub.com/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://enpassant.hackclub.com/og.png"
+    />
+    <link
+      rel="preload"
+      href="/fonts/gabarito-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/source-serif-4-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <a class="nav__mark" href="/">En Passant</a>
+      <a class="btn btn--brass nav__cta" href="/submit">Submit a game</a>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__copy">
+          <h1 class="hero__headline">Invent a<br />game</h1>
+          <p class="hero__sub">
+            Build a board game that runs in a browser. Get real prizes from the
+            shop.
+          </p>
+          <p class="hero__runby">
+            Run by Jeremy Woolley,
+            <a href="https://hackclub.com">Hack Club</a> gap year. For teens
+            13-18, free.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--brass btn--lg" href="/submit">Submit a game</a>
+          </div>
+        </div>
+
+        <div class="hero__board" aria-hidden="true">
+          <svg
+            viewBox="0 0 1100 1100"
+            preserveAspectRatio="xMinYMin slice"
+            role="presentation"
+          >
+            <rect x="0" y="0" width="1100" height="1100" fill="#f0ead8" />
+            <rect
+              x="0"
+              y="0"
+              width="100"
+              height="100"
+              fill="#181917"
+              fill-opacity="0.1"
+            />
+            <rect
+              x="1000"
+              y="0"
+              width="100"
+              height="100"
+              fill="#181917"
+              fill-opacity="0.1"
+            />
+            <rect
+              x="0"
+              y="1000"
+              width="100"
+              height="100"
+              fill="#181917"
+              fill-opacity="0.1"
+            />
+            <rect
+              x="1000"
+              y="1000"
+              width="100"
+              height="100"
+              fill="#181917"
+              fill-opacity="0.1"
+            />
+            <rect
+              x="500"
+              y="500"
+              width="100"
+              height="100"
+              fill="#181917"
+              fill-opacity="0.1"
+              stroke="#c2352c"
+              stroke-width="4"
+            />
+            <path
+              d="M0 0V1100 M100 0V1100 M200 0V1100 M300 0V1100 M400 0V1100 M500 0V1100 M600 0V1100 M700 0V1100 M800 0V1100 M900 0V1100 M1000 0V1100 M1100 0V1100 M0 0H1100 M0 100H1100 M0 200H1100 M0 300H1100 M0 400H1100 M0 500H1100 M0 600H1100 M0 700H1100 M0 800H1100 M0 900H1100 M0 1000H1100 M0 1100H1100"
+              fill="none"
+              stroke="#181917"
+              stroke-opacity="0.3"
+              stroke-width="2"
+            />
+            <rect
+              x="2"
+              y="2"
+              width="1096"
+              height="1096"
+              fill="none"
+              stroke="#181917"
+              stroke-opacity="0.5"
+              stroke-width="4"
+            />
+            <circle cx="350" cy="50" r="34" fill="#181917" />
+            <circle cx="450" cy="50" r="34" fill="#181917" />
+            <circle cx="550" cy="50" r="34" fill="#181917" />
+            <circle cx="650" cy="50" r="34" fill="#181917" />
+            <circle cx="750" cy="50" r="34" fill="#181917" />
+            <circle cx="550" cy="150" r="34" fill="#181917" />
+            <circle cx="350" cy="1050" r="34" fill="#181917" />
+            <circle cx="450" cy="1050" r="34" fill="#181917" />
+            <circle cx="550" cy="1050" r="34" fill="#181917" />
+            <circle cx="650" cy="1050" r="34" fill="#181917" />
+            <circle cx="750" cy="1050" r="34" fill="#181917" />
+            <circle cx="550" cy="950" r="34" fill="#181917" />
+            <circle cx="50" cy="350" r="34" fill="#181917" />
+            <circle cx="50" cy="450" r="34" fill="#181917" />
+            <circle cx="50" cy="550" r="34" fill="#181917" />
+            <circle cx="50" cy="650" r="34" fill="#181917" />
+            <circle cx="50" cy="750" r="34" fill="#181917" />
+            <circle cx="150" cy="550" r="34" fill="#181917" />
+            <circle cx="1050" cy="350" r="34" fill="#181917" />
+            <circle cx="1050" cy="450" r="34" fill="#181917" />
+            <circle cx="1050" cy="550" r="34" fill="#181917" />
+            <circle cx="1050" cy="650" r="34" fill="#181917" />
+            <circle cx="1050" cy="750" r="34" fill="#181917" />
+            <circle cx="950" cy="550" r="34" fill="#181917" />
+            <circle
+              cx="550"
+              cy="350"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="450"
+              cy="450"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="550"
+              cy="450"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="650"
+              cy="450"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="350"
+              cy="550"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="450"
+              cy="550"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="650"
+              cy="550"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="750"
+              cy="550"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="450"
+              cy="650"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="550"
+              cy="650"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="650"
+              cy="650"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="550"
+              cy="750"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+            <circle
+              cx="550"
+              cy="550"
+              r="30"
+              fill="none"
+              stroke="#181917"
+              stroke-width="7"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <div class="stack">
+        <!-- SS1 -->
+        <section
+          class="card"
+          id="what-this-is"
+          data-folio="1"
+          aria-labelledby="what-h"
+        >
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>1</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#what-this-is"
+              aria-label="Section 1, What this is"
+            >
+              &sect;1
+            </a>
+            <h2 class="card__h" id="what-h">What this is</h2>
+          </div>
+          <div class="clause" id="1.1">
+            <a class="clause__n" href="#1.1" aria-label="Clause 1.1">1.1</a>
+            <div class="clause__body">
+              <div class="prose">
+                <p>
+                  En Passant is a program from
+                  <a href="https://hackclub.com">Hack Club</a>, a nonprofit for
+                  teenage programmers. You build a board game that runs in a
+                  browser, track the time you spend building it, and spend those
+                  hours in a shop full of real things. Free for anyone 13 to 18
+                  (inclusive).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SS2 -->
+        <section
+          class="card"
+          id="how-it-works"
+          data-folio="2"
+          aria-labelledby="how-h"
+        >
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>2</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#how-it-works"
+              aria-label="Section 2, How it works"
+            >
+              &sect;2
+            </a>
+            <h2 class="card__h" id="how-h">How it works</h2>
+          </div>
+          <ol class="steps">
+            <li class="clause" id="2.1">
+              <a class="clause__n" href="#2.1" aria-label="Clause 2.1">2.1</a>
+              <div class="clause__body">
+                Join the
+                <a href="https://slack.hackclub.com">Hack Club Slack</a> and
+                find
+                <a
+                  href="https://hackclub.enterprise.slack.com/archives/C0BRQ7R7KS5"
+                  >#en-passant</a
+                >.
+              </div>
+            </li>
+            <li class="clause" id="2.2">
+              <a class="clause__n" href="#2.2" aria-label="Clause 2.2">2.2</a>
+              <div class="clause__body">
+                Build a board game that runs in a browser.
+              </div>
+            </li>
+            <li class="clause" id="2.3">
+              <a class="clause__n" href="#2.3" aria-label="Clause 2.3">2.3</a>
+              <div class="clause__body">
+                Track your time with
+                <a href="https://hackatime.hackclub.com">Hackatime</a> (so we
+                can measure how long you spent building it).
+              </div>
+            </li>
+            <li class="clause" id="2.4">
+              <a class="clause__n" href="#2.4" aria-label="Clause 2.4">2.4</a>
+              <div class="clause__body">
+                Ship the game, then <a href="/submit">submit it</a>.
+              </div>
+            </li>
+            <li class="clause" id="2.5">
+              <a class="clause__n" href="#2.5" aria-label="Clause 2.5">2.5</a>
+              <div class="clause__body">Spend your pips in the shop.</div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- SS3 -->
+        <section
+          class="card"
+          id="what-counts"
+          data-folio="3"
+          aria-labelledby="counts-h"
+        >
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>3</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#what-counts"
+              aria-label="Section 3, What counts"
+            >
+              &sect;3
+            </a>
+            <h2 class="card__h" id="counts-h">What counts</h2>
+          </div>
+
+          <div class="clause" id="3.1">
+            <a class="clause__n" href="#3.1" aria-label="Clause 3.1">3.1</a>
+            <div class="clause__body">
+              <div class="verdicts">
+                <div class="verdict verdict--yes">
+                  <p class="verdict__label">
+                    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 13 L9.5 18.5 L20 6" />
+                    </svg>
+                    Yes
+                  </p>
+                  <ul>
+                    <li>a chess variant</li>
+                    <li>a hex wargame</li>
+                    <li>an abstract strategy game</li>
+                    <li>a Go or Othello-like</li>
+                    <li>tile-laying on a board</li>
+                    <li>
+                      something weird with three players and a hexagonal board
+                    </li>
+                  </ul>
+                </div>
+                <div class="verdict verdict--ask">
+                  <p class="verdict__label">
+                    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8.5 8.5 A3.5 3.5 0 1 1 12 12 v2.5" />
+                      <path d="M12 19 v0.01" />
+                    </svg>
+                    Ask in #en-passant
+                  </p>
+                  <ul>
+                    <li>card-driven games</li>
+                    <li>deckbuilders</li>
+                    <li>dice games</li>
+                    <li>turn-based with no board</li>
+                  </ul>
+                </div>
+                <div class="verdict verdict--no">
+                  <p class="verdict__label">
+                    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M6 6 L18 18" />
+                      <path d="M18 6 L6 18" />
+                    </svg>
+                    No
+                  </p>
+                  <ul>
+                    <li>platformers and action games</li>
+                    <li>anything real-time</li>
+                    <li>no win condition</li>
+                    <li>not playable in a browser</li>
+                    <li>not shipped anywhere public</li>
+                    <li>a repo with a single commit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clause" id="3.2">
+            <a class="clause__n" href="#3.2" aria-label="Clause 3.2">3.2</a>
+            <div class="clause__body">
+              <div class="deal">
+                <div class="deal__half">
+                  <h3 class="deal__h">You Ship</h3>
+                  <ul class="components">
+                    <li>
+                      a browser-playable board game: a board, pieces, movement
+                      rules, a win condition
+                    </li>
+                    <li>a public repo with real commit history</li>
+                    <li>a README with the rules</li>
+                    <li>a public demo URL</li>
+                  </ul>
+                </div>
+                <div class="deal__half">
+                  <h3 class="deal__h">We Ship</h3>
+                  <ul class="components">
+                    <li>pips for the time you spend</li>
+                    <li>multipliers, bonus pips for specific achievements</li>
+                    <li>a shop where you can spend your pops</li>
+                    <li>whatever you buy will be mailed to you</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SS4 -->
+        <section class="card" id="pips" data-folio="4" aria-labelledby="pips-h">
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>4</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#pips"
+              aria-label="Section 4, Pips and multipliers"
+            >
+              &sect;4
+            </a>
+            <h2 class="card__h" id="pips-h">Pips and multipliers</h2>
+          </div>
+          <div class="prose prose--lede">
+            <p>
+              Every hour earns pips, counted by Hackatime. Optionally, add more
+              features to earn bonus pips!
+            </p>
+          </div>
+
+          <ul class="ladder">
+            <li class="ladder__row">
+              <span class="ladder__tier">
+                A board game two people can play in a browser
+              </span>
+              <span class="ladder__val ladder__val--base">base rate</span>
+            </li>
+            <li class="ladder__row">
+              <span class="ladder__tier">Online multiplayer</span>
+              <span class="ladder__val">+20%</span>
+            </li>
+            <li class="ladder__row">
+              <span class="ladder__tier">
+                A computer opponent with a real algorithm
+              </span>
+              <span class="ladder__val">+20%</span>
+            </li>
+            <li class="ladder__row">
+              <span class="ladder__tier">
+                Your computer opponent beats me (Jeremy)!
+              </span>
+              <span class="ladder__val">+40%</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- SS5 -->
+        <section class="card" id="shop" data-folio="5" aria-labelledby="shop-h">
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>5</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#shop"
+              aria-label="Section 5, The shop"
+            >
+              &sect;5
+            </a>
+            <h2 class="card__h" id="shop-h">The shop</h2>
+          </div>
+          <!-- <div class="prose prose--lede">
+            <p>
+              Your hours are the only currency in the shop. The items are still being picked,
+              so these four are stand-ins.
+            </p>
+          </div> -->
+          <ul class="shelf">
+            <li class="shelf__item">
+              <p class="shelf__name">Item to be chosen</p>
+              <p class="shelf__cost"><span class="tbc">a few hours</span></p>
+            </li>
+            <li class="shelf__item">
+              <p class="shelf__name">Item to be chosen</p>
+              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
+            </li>
+            <li class="shelf__item">
+              <p class="shelf__name">Item to be chosen</p>
+              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
+            </li>
+            <li class="shelf__item shelf__item--far">
+              <p class="shelf__name">Something worth saving for</p>
+              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- SS6 -->
+        <section
+          class="card"
+          id="gallery"
+          data-folio="6"
+          aria-labelledby="gallery-h"
+        >
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>6</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#gallery"
+              aria-label="Section 6, Games people have shipped"
+            >
+              &sect;6
+            </a>
+            <h2 class="card__h" id="gallery-h">Games people have shipped</h2>
+          </div>
+          <div class="empty">
+            <div class="empty__slot" aria-hidden="true">
+              <svg viewBox="0 0 120 120" role="presentation">
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="119"
+                  height="119"
+                  fill="none"
+                  stroke="#e4dbc4"
+                />
+                <path
+                  d="M0 0V120 M30 0V120 M60 0V120 M90 0V120 M120 0V120 M0 0H120 M0 30H120 M0 60H120 M0 90H120 M0 120H120"
+                  fill="none"
+                  stroke="#181917"
+                  stroke-opacity="0.14"
+                  stroke-width="1.5"
+                  transform="translate(0,0)"
+                />
+                <rect
+                  x="45"
+                  y="45"
+                  width="30"
+                  height="30"
+                  fill="#181917"
+                  fill-opacity="0.1"
+                />
+              </svg>
+            </div>
+            <div class="empty__copy">
+              <h3 class="empty__h">Nobody has shipped one yet</h3>
+              <!-- <p>
+                Be the first!
+              </p> -->
+              <a class="btn btn--outline" href="/submit">Be the first!</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SS7 -->
+        <section class="card" id="faq" data-folio="7" aria-labelledby="q-h">
+          <p class="card__run" aria-hidden="true">
+            <span>En Passant</span><span>7</span>
+          </p>
+          <div class="card__head">
+            <a
+              class="card__folio"
+              href="#faq"
+              aria-label="Section 7, Questions"
+            >
+              &sect;7
+            </a>
+            <h2 class="card__h" id="q-h">Questions</h2>
+          </div>
+          <dl class="faq">
+            <div class="faq__pair">
+              <dt>Is it free?</dt>
+              <dd>
+                Yes. All Hack Club events are free for 13-18 year olds, your
+                prizes will be mailed to you at no cost. (Hack Club cannot cover
+                customs fees)
+              </dd>
+            </div>
+            <div class="faq__pair">
+              <dt>Who can enter?</dt>
+              <dd>Anyone 13 to 18, inclusive.</dd>
+            </div>
+            <div class="faq__pair">
+              <dt>Do I need Hackatime?</dt>
+              <dd>
+                Yes. We need Hackatime in order to track how many pips you've
+                earned.
+                <a href="https://hackatime.hackclub.com">Set it up here.</a>
+              </dd>
+            </div>
+            <div class="faq__pair">
+              <dt>Is a card game a board game?</dt>
+              <dd>
+                Ask for clarification in
+                <a
+                  href="https://hackclub.enterprise.slack.com/archives/C0BRQ7R7KS5"
+                >
+                  #en-passant</a
+                >. If it has a board, pieces, movement rules and a win
+                condition, it counts. If it's just a card game with no board, it
+                likely doesn't.
+              </dd>
+            </div>
+            <div class="faq__pair">
+              <dt>How many can I submit?</dt>
+              <dd>More than one. Each game is judged on its own hours.</dd>
+            </div>
+            <div class="faq__pair">
+              <dt>What do I need to submit?</dt>
+              <dd>
+                A shipped game at a live URL where someone else can play it, a
+                public repo with commit history, a README with the rules, and a
+                screenshot of the game.
+              </dd>
+            </div>
+            <div class="faq__pair">
+              <dt>Is this legit?</dt>
+              <dd>
+                Hack Club is a 501(c)(3) nonprofit (EIN: 81-2908499) and has run
+                <a href="https://hackclub.com/programs">
+                  many programs like this</a
+                >. This one is run by Jeremy Woolley, and the site is
+                <a href="https://github.com/hackclub/en-passant">open source</a
+                >.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="closing" aria-labelledby="closing-h">
+          <h2 class="closing__h" id="closing-h">Go invent a game</h2>
+          <a class="btn btn--brass btn--lg" href="/submit">Submit a game</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <nav class="foot__links" aria-label="Footer">
+        <a href="https://hackclub.com">Hack Club</a>
+        <a href="https://hackclub.enterprise.slack.com/archives/C0BRQ7R7KS5">
+          #en-passant
+        </a>
+        <a href="https://hackclub.com/privacy-and-terms">Terms</a>
+        <a href="https://hackclub.com/privacy-and-terms">Privacy</a>
+        <a href="https://forms.hackclub.com/bounty">Fulfillment bounty</a>
+        <a href="mailto:jeremy@hackclub.com">jeremy@hackclub.com</a>
+        <a href="https://github.com/hackclub/en-passant">Source</a>
+      </nav>
+    </footer>
   </body>
 </html>

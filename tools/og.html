@@ -1,0 +1,130 @@
+<!doctype html>
+<!--
+  Source for public/og.png, the social card. Not shipped: it lives outside public/ so
+  Vite does not copy it into dist.
+
+  To regenerate: run the dev server, open /tools/og.html, and screenshot the viewport at
+  exactly 1200x630 into public/og.png.
+
+  It links src/style.css rather than copying values, so the card's felt, palette and faces
+  are always the page's own. Keep the copy here in sentence case and ASCII-only, and keep
+  the pieces flat, or the card will contradict the page it represents.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>En Passant social card, 1200x630</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 45%;
+      }
+
+      .og__copy {
+        align-self: center;
+        padding-left: 62px;
+      }
+
+      .og__headline {
+        margin: 0;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 132px;
+        line-height: 0.9;
+        letter-spacing: -0.005em;
+        color: var(--paper);
+        text-shadow: 0 2px 18px rgba(4, 18, 13, 0.35);
+      }
+
+      .og__deck {
+        margin: 30px 0 0;
+        font-size: 25px;
+        line-height: 1.4;
+        color: var(--sage);
+        max-width: 21ch;
+      }
+
+      .og__mark {
+        margin: 34px 0 0;
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 19px;
+        color: var(--brass);
+        white-space: nowrap;
+      }
+
+      .og__board {
+        position: relative;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+
+      .og__board svg {
+        width: auto;
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="og__copy">
+      <h1 class="og__headline">Invent a<br />game</h1>
+      <p class="og__deck">Build a board game you can play in a browser.</p>
+      <p class="og__mark">En Passant, a Hack Club program</p>
+    </div>
+    <div class="og__board">
+      <svg viewBox="0 0 1100 1100" preserveAspectRatio="xMinYMin slice" role="presentation">
+        <rect x="0" y="0" width="1100" height="1100" fill="#f0ead8" />
+        <rect x="0" y="0" width="100" height="100" fill="#181917" fill-opacity="0.1" />
+        <rect x="1000" y="0" width="100" height="100" fill="#181917" fill-opacity="0.1" />
+        <rect x="0" y="1000" width="100" height="100" fill="#181917" fill-opacity="0.1" />
+        <rect x="1000" y="1000" width="100" height="100" fill="#181917" fill-opacity="0.1" />
+        <rect x="500" y="500" width="100" height="100" fill="#181917" fill-opacity="0.1" stroke="#c2352c" stroke-width="4" />
+        <path d="M0 0V1100 M100 0V1100 M200 0V1100 M300 0V1100 M400 0V1100 M500 0V1100 M600 0V1100 M700 0V1100 M800 0V1100 M900 0V1100 M1000 0V1100 M1100 0V1100 M0 0H1100 M0 100H1100 M0 200H1100 M0 300H1100 M0 400H1100 M0 500H1100 M0 600H1100 M0 700H1100 M0 800H1100 M0 900H1100 M0 1000H1100 M0 1100H1100" fill="none" stroke="#181917" stroke-opacity="0.3" stroke-width="2" />
+        <rect x="2" y="2" width="1096" height="1096" fill="none" stroke="#181917" stroke-opacity="0.5" stroke-width="4" />
+        <circle cx="350" cy="50" r="34" fill="#181917" />
+        <circle cx="450" cy="50" r="34" fill="#181917" />
+        <circle cx="550" cy="50" r="34" fill="#181917" />
+        <circle cx="650" cy="50" r="34" fill="#181917" />
+        <circle cx="750" cy="50" r="34" fill="#181917" />
+        <circle cx="550" cy="150" r="34" fill="#181917" />
+        <circle cx="350" cy="1050" r="34" fill="#181917" />
+        <circle cx="450" cy="1050" r="34" fill="#181917" />
+        <circle cx="550" cy="1050" r="34" fill="#181917" />
+        <circle cx="650" cy="1050" r="34" fill="#181917" />
+        <circle cx="750" cy="1050" r="34" fill="#181917" />
+        <circle cx="550" cy="950" r="34" fill="#181917" />
+        <circle cx="50" cy="350" r="34" fill="#181917" />
+        <circle cx="50" cy="450" r="34" fill="#181917" />
+        <circle cx="50" cy="550" r="34" fill="#181917" />
+        <circle cx="50" cy="650" r="34" fill="#181917" />
+        <circle cx="50" cy="750" r="34" fill="#181917" />
+        <circle cx="150" cy="550" r="34" fill="#181917" />
+        <circle cx="1050" cy="350" r="34" fill="#181917" />
+        <circle cx="1050" cy="450" r="34" fill="#181917" />
+        <circle cx="1050" cy="550" r="34" fill="#181917" />
+        <circle cx="1050" cy="650" r="34" fill="#181917" />
+        <circle cx="1050" cy="750" r="34" fill="#181917" />
+        <circle cx="950" cy="550" r="34" fill="#181917" />
+        <circle cx="550" cy="350" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="450" cy="450" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="550" cy="450" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="650" cy="450" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="350" cy="550" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="450" cy="550" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="650" cy="550" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="750" cy="550" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="450" cy="650" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="550" cy="650" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="650" cy="650" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="550" cy="750" r="30" fill="none" stroke="#181917" stroke-width="7" />
+        <circle cx="550" cy="550" r="30" fill="none" stroke="#181917" stroke-width="7" />
+      </svg>
+    </div>
+  </body>
+</html>
