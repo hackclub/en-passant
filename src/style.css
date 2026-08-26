@@ -595,7 +595,7 @@ a:hover {
 
 .ladder__row {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	justify-content: space-between;
 	gap: 1.5rem;
 	padding: 1.0625rem 0;
