@@ -1,14 +1,17 @@
+/* subsets of the full files, which are kept beside them: weight axes cut to the
+   400-700 the page uses, and Source Serif's opsz pinned at 16 since it only ever
+   sets 13px to 24px here. that pin is 50KB of the 102KB saved */
 @font-face {
 	font-family: "Gabarito";
-	src: url("/fonts/gabarito-latin.woff2") format("woff2");
+	src: url("/fonts/gabarito-latin-subset.woff2") format("woff2");
 	font-weight: 400 700;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "Source Serif 4";
-	src: url("/fonts/source-serif-4-latin.woff2") format("woff2");
-	font-weight: 200 900;
+	src: url("/fonts/source-serif-4-latin-subset.woff2") format("woff2");
+	font-weight: 400 700;
 	font-display: swap;
 }
 
@@ -57,7 +60,6 @@
 }
 
 html {
-	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -95,6 +97,11 @@ a:hover {
 	outline-offset: 3px;
 }
 
+/* brass is 2.38:1 on paper and misses the 3:1 floor for a focus indicator */
+.card :focus-visible {
+	outline-color: var(--brass-ink);
+}
+
 @supports (scrollbar-color: auto) {
 	html {
 		scrollbar-color: var(--sage-dim) var(--felt-deep);
@@ -113,7 +120,13 @@ a:hover {
 }
 
 .skip:focus {
-	left: 0;
+	left: 0.5rem;
+	top: 0.5rem;
+}
+
+/* the skip link's own target, or the top of the hero lands behind the sticky nav */
+#main {
+	scroll-margin-top: var(--nav-h);
 }
 
 /* ---------- nav ---------- */
@@ -177,7 +190,7 @@ a:hover {
 }
 
 .btn--lg {
-	min-width: 18.125rem;
+	min-width: min(18.125rem, 100%);
 	padding: 1.35rem 2.25rem;
 	font-size: 1rem;
 	border-radius: 5px;
@@ -245,8 +258,26 @@ a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 1.5rem;
+	gap: 1.25rem;
 	margin-top: 2.25rem;
+}
+
+/* the brass button asks for a finished game, so the low-emphasis link is the only
+   thing here a first-timer can act on */
+.hero__how {
+	font-family: var(--display);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	color: var(--sage);
+	text-decoration-color: rgba(143, 166, 156, 0.55);
+	text-underline-offset: 0.25em;
+	transition: color 140ms var(--lift);
+}
+
+.hero__how:hover {
+	color: var(--paper);
+	text-decoration-color: currentColor;
 }
 
 .hero__board {
@@ -307,6 +338,10 @@ a:hover {
 	color: var(--ink-soft);
 }
 
+/* uncomment to see the page without the running heads */
+/* .card__run { display: none }
+.card { padding-top: calc(clamp(1.5rem, 3.2vw, 3.25rem) * 1.6) } */
+
 /* a numbered clause: the number lives in the margin so "see 3.2" resolves */
 .clause {
 	display: grid;
@@ -354,8 +389,10 @@ a:hover {
 		grid-column: 2;
 	}
 
+	/* no explicit grid-row anywhere in this grid: rows flow from source order, so
+	   hiding the running head moves everything up a row instead of leaving row 1
+	   empty for the first clause to fall into while the head stays pinned below it */
 	.card__run {
-		grid-row: 1;
 		grid-column: 1 / -1;
 	}
 
@@ -399,13 +436,11 @@ a:hover {
 	}
 
 	.card__folio {
-		grid-row: 2;
 		grid-column: 1;
 		text-align: right;
 	}
 
 	.card__h {
-		grid-row: 2;
 		grid-column: 2;
 	}
 }
@@ -460,8 +495,7 @@ a:hover {
 }
 
 .prose a,
-.faq a,
-.aside a {
+.faq a {
 	color: var(--ink);
 	text-decoration-color: rgba(198, 142, 32, 0.9);
 }
@@ -486,7 +520,7 @@ a:hover {
 
 .verdicts {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
 	gap: clamp(1.25rem, 2.5vw, 2.5rem);
 	padding-bottom: clamp(1.75rem, 3vw, 2.75rem);
 	border-bottom: 1px solid var(--paper-shade);
@@ -526,6 +560,12 @@ a:hover {
 	color: #a82a22;
 }
 
+.verdict__label a {
+	color: inherit;
+	text-decoration-color: currentColor;
+	text-underline-offset: 0.2em;
+}
+
 .verdict ul {
 	margin: 0;
 	padding: 0;
@@ -543,7 +583,7 @@ a:hover {
 
 .deal {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
 	gap: clamp(1.5rem, 3vw, 3.25rem);
 }
 
@@ -618,31 +658,22 @@ a:hover {
 	color: var(--brass-ink);
 }
 
-/* the baseline row is not a bonus, so it stays quiet and lets the figures carry */
 .ladder__val--base {
+	color: var(--ink);
+}
+
+.ladder__unit {
 	font-size: 0.8125rem;
 	font-weight: 700;
 	letter-spacing: 0.01em;
 	color: var(--ink-soft);
 }
 
-.tbc {
-	width: fit-content;
-	color: var(--ink-soft);
-	border: 1px dashed rgba(125, 90, 18, 0.8);
-	padding: 0.25rem 0.5rem;
-	font-family: var(--display);
-	font-size: 0.75rem;
-	font-weight: 600;
-	letter-spacing: 0.01em;
-	display: inline-block;
-}
-
 /* ---------- shop ---------- */
 
 .shelf {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
 	gap: 1rem;
 	margin: 1.5rem 0 0;
 	padding: 0;
@@ -726,22 +757,18 @@ a:hover {
 	border-color: var(--brass);
 }
 
-.aside {
-	margin: 1.5rem 0 0;
-	font-size: 0.9375rem;
-	color: var(--ink-soft);
-}
-
 .fine {
 	max-width: 62ch;
 	margin: 1.5rem 0 0;
 	border-top: 1px solid var(--paper-shade);
-	padding-top: 0.875rem;
 }
 
+/* the pad belongs to the summary, not the container: as container padding the hit
+   area was the 21px of the text itself, with the gap up to the rule dead */
 .fine > summary {
 	cursor: pointer;
 	list-style: none;
+	padding: 0.875rem 0;
 	font-family: var(--serif);
 	font-size: 0.875rem;
 	font-weight: 600;
@@ -752,14 +779,23 @@ a:hover {
 	display: none;
 }
 
+/* drawn, not set as + and -, since the hyphen sits higher and narrower than the plus
+   and the marker visibly jumps on toggle */
 .fine > summary::before {
-	content: "+";
+	content: "";
 	display: inline-block;
-	width: 1rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-right: 0.5rem;
+	vertical-align: 1px;
+	background:
+		linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+		linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat;
 }
 
 .fine[open] > summary::before {
-	content: "-";
+	background-image: linear-gradient(currentColor, currentColor);
+	background-size: 100% 1.5px;
 }
 
 .fine p {
@@ -767,6 +803,11 @@ a:hover {
 	font-size: 1rem;
 	line-height: 1.55;
 	color: var(--ink-soft);
+}
+
+/* the summary's own bottom pad is the gap to the first paragraph */
+.fine > summary + p {
+	margin-top: 0;
 }
 
 /* ---------- gallery empty state ---------- */
@@ -810,14 +851,6 @@ a:hover {
 	font-weight: 500;
 	font-size: 1.625rem;
 	line-height: 1.05;
-}
-
-.empty__copy p {
-	margin: 0 0 1.125rem;
-	font-size: 1rem;
-	line-height: 1.55;
-	max-width: 48ch;
-	color: var(--ink-soft);
 }
 
 /* ---------- faq ---------- */
@@ -944,10 +977,6 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-
 	.btn,
 	.shelf__item,
 	.empty,
