@@ -7,12 +7,12 @@
     <title>En Passant</title>
     <meta
       name="description"
-      content="Build a board game that runs in a browser. Get real prizes from the shop. A free Hack Club program for teens 13 to 18."
+      content="Build a board game that runs in a browser. Get prizes, up to a physical copy of your game. A free Hack Club program for teens 13 to 18."
     />
     <meta property="og:title" content="En Passant" />
     <meta
       property="og:description"
-      content="Build a board game that runs in a browser. Get real prizes from the shop."
+      content="Build a board game that runs in a browser. Get prizes, up to a physical copy of your game."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://enpassant.hackclub.com/" />
@@ -53,8 +53,8 @@
         <div class="hero__copy">
           <h1 class="hero__headline">Invent a<br />game</h1>
           <p class="hero__sub">
-            Build a board game that runs in a browser. Get real prizes from the
-            shop.
+            Build a board game that runs in a browser. Get prizes, up to a
+            physical copy of your game.
           </p>
           <p class="hero__runby">
             Run by Jeremy Woolley,
@@ -461,10 +461,13 @@
                   <h3 class="deal__h">We Ship</h3>
                   <ul class="components">
                     <li>pips for the time you spend</li>
-                    <li>multipliers, bonus pips for specific achievements</li>
+                    <li>
+                      multipliers that raise the rate, set out in
+                      <a href="#pips">&sect;4</a>
+                    </li>
                     <li>a shop where you can spend your pips</li>
-                    <li>whatever you buy will be mailed to you</li>
-                  </ul>q
+                    <li>what you buy, mailed to you or delivered digitally</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -486,37 +489,56 @@
             </a>
             <h2 class="card__h" id="pips-h">Pips and multipliers</h2>
           </div>
-          <div class="prose prose--lede">
-            <p>
-              Every hour earns pips, counted by Hackatime. Optionally, add more
-              features to earn bonus pips!
-            </p>
+          <div class="clause" id="4.1">
+            <a class="clause__n" href="#4.1" aria-label="Clause 4.1">4.1</a>
+            <div class="clause__body">
+              <div class="prose prose--lede">
+                <p>
+                  Every hour of tracked time earns 10 pips. Bonuses stack, so all
+                  three together is 18 pips an hour.
+                </p>
+              </div>
+              <ul class="ladder">
+                <li class="ladder__row">
+                  <span class="ladder__tier">
+                    A board game two people can play in a browser
+                  </span>
+                  <span class="ladder__val ladder__val--base">
+                    10 pips/hour
+                  </span>
+                </li>
+                <li class="ladder__row">
+                  <span class="ladder__tier">Online multiplayer</span>
+                  <span class="ladder__val">+20%</span>
+                </li>
+                <li class="ladder__row">
+                  <span class="ladder__tier">
+                    A computer opponent with a real algorithm
+                  </span>
+                  <span class="ladder__val">+20%</span>
+                </li>
+                <li class="ladder__row">
+                  <span class="ladder__tier">
+                    Your computer opponent beats me (Jeremy)
+                  </span>
+                  <span class="ladder__val">+40%</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <ul class="ladder">
-            <li class="ladder__row">
-              <span class="ladder__tier">
-                A board game two people can play in a browser
-              </span>
-              <span class="ladder__val ladder__val--base">base rate</span>
-            </li>
-            <li class="ladder__row">
-              <span class="ladder__tier">Online multiplayer</span>
-              <span class="ladder__val">+20%</span>
-            </li>
-            <li class="ladder__row">
-              <span class="ladder__tier">
-                A computer opponent with a real algorithm
-              </span>
-              <span class="ladder__val">+20%</span>
-            </li>
-            <li class="ladder__row">
-              <span class="ladder__tier">
-                Your computer opponent beats me (Jeremy)!
-              </span>
-              <span class="ladder__val">+40%</span>
-            </li>
-          </ul>
+          <div class="clause" id="4.2">
+            <a class="clause__n" href="#4.2" aria-label="Clause 4.2">4.2</a>
+            <div class="clause__body">
+              <div class="prose prose--lede">
+                <p>
+                  Four hours at the base rate is 40 pips, which covers a domain
+                  for your game. Ten hours is 100 pips, a Raspberry Pi. The same
+                  ten hours with every bonus is 180.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- SS5 -->
@@ -534,30 +556,107 @@
             </a>
             <h2 class="card__h" id="shop-h">The shop</h2>
           </div>
-          <!-- <div class="prose prose--lede">
-            <p>
-              Your hours are the only currency in the shop. The items are still being picked,
-              so these four are stand-ins.
-            </p>
-          </div> -->
-          <ul class="shelf">
-            <li class="shelf__item">
-              <p class="shelf__name">Item to be chosen</p>
-              <p class="shelf__cost"><span class="tbc">a few hours</span></p>
-            </li>
-            <li class="shelf__item">
-              <p class="shelf__name">Item to be chosen</p>
-              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
-            </li>
-            <li class="shelf__item">
-              <p class="shelf__name">Item to be chosen</p>
-              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
-            </li>
-            <li class="shelf__item shelf__item--far">
-              <p class="shelf__name">Something worth saving for</p>
-              <p class="shelf__cost"><span class="tbc">cost to be set</span></p>
-            </li>
-          </ul>
+          <div class="clause" id="5.1">
+            <a class="clause__n" href="#5.1" aria-label="Clause 5.1">5.1</a>
+            <div class="clause__body">
+              <div class="prose prose--lede">
+                <p>
+                  Spend your pips in the shop! Items subject to change.
+                </p>
+              </div>
+              <ul class="shelf">
+                <li class="shelf__item">
+                  <p class="shelf__name">A domain name, one year</p>
+                  <p class="shelf__note">Up to $12, stackable</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">35 pips</p>
+                    <p class="shelf__mode">digital</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Hack Club enamel pin</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">45 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Aseprite</p>
+                  <p class="shelf__note">Pixel art editor</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">60 pips</p>
+                    <p class="shelf__mode">digital</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Tabletop Simulator</p>
+                  <p class="shelf__note">Create and play board games online</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">60 pips</p>
+                    <p class="shelf__mode">digital</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Hack Club socks</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">75 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Raspberry Pi Zero 2 W</p>
+                  <p class="shelf__note">Comes with a Hack Club 64GB microSD card</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">100 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">YubiKey</p>
+                  <p class="shelf__note">USB-C security key for two-factor login</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">100 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+                <li class="shelf__item">
+                  <p class="shelf__name">Onitama</p>
+                  <p class="shelf__note">A strategy board game on a 5x5 board</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">150 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+                <li class="shelf__item shelf__item--far">
+                  <p class="shelf__name">The Game Crafter grant</p>
+                  <p class="shelf__note">Your game, physically made</p>
+                  <div class="shelf__foot">
+                    <p class="shelf__cost">300 pips</p>
+                    <p class="shelf__mode">mailed</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="clause" id="5.2">
+            <a class="clause__n" href="#5.2" aria-label="Clause 5.2">5.2</a>
+            <div class="clause__body">
+              <h3 class="clause__h">The Game Crafter grant</h3>
+              <div class="prose prose--lede">
+                <p>
+                  Get your game manufactured. You pick the board, the cards, the
+                  pieces and the box, and The Game Crafter makes them. 300 pips
+                  covers a small boxed game, and more pips buy a bigger one.
+                </p>
+              </div>
+              <details class="fine">
+                <summary>More details</summary>
+                <p>The base grant is $100, and you can spend 30 more pips to add $10 to the grant, with no cap.</p>
+                <p>If direct international shipping is expensive, you can subtract $25 from your grant to ship it via HQ instead.</p>
+              </details>
+            </div>
+          </div>
         </section>
 
         <!-- SS6 -->
@@ -659,13 +758,9 @@
               <dt>Is a card game a board game?</dt>
               <dd>
                 Ask for clarification in
-                <a
-                  href="https://hackclub.enterprise.slack.com/archives/C0BRQ7R7KS5"
-                >
-                  #en-passant</a
-                >. If it has a board, pieces, movement rules and a win
-                condition, it counts. If it's just a card game with no board, it
-                likely doesn't.
+                <a href="https://slack.hackclub.com">#en-passant</a>. If it has
+                a board, pieces, movement rules and a win condition, it counts.
+                If it's just a card game with no board, it likely doesn't.
               </dd>
             </div>
             <div class="faq__pair">
@@ -704,9 +799,7 @@
     <footer class="foot">
       <nav class="foot__links" aria-label="Footer">
         <a href="https://hackclub.com">Hack Club</a>
-        <a href="https://hackclub.enterprise.slack.com/archives/C0BRQ7R7KS5">
-          #en-passant
-        </a>
+        <a href="https://slack.hackclub.com">#en-passant</a>
         <a href="https://hackclub.com/privacy-and-terms">Terms</a>
         <a href="https://hackclub.com/privacy-and-terms">Privacy</a>
         <a href="https://forms.hackclub.com/bounty">Fulfillment bounty</a>
